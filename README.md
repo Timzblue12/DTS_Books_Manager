@@ -72,7 +72,7 @@ __DTS Books Manager is a Django-based web application built to offer libraries a
 
 # Project's Screenshots
 ![Registered](static/screenshots/registered_readers.png)
-![Homepage](static/screenshots/homepage.png)
+![Homepage](static/screenshots/web_homepage.png)
 ![Assigned Books](static/screenshots/assigned_books.png)
 ![Admin Dashboard](static/screenshots/admin_page.png)
 
