@@ -67,8 +67,6 @@ __DTS Books Manager is a Django-based web application built to offer libraries a
 # Task Manager (Trello Board):
 * https://trello.com/invite/b/AxnETonq/ATTI82aed7718ca2934b7ef087f5d492d70b4132D620/my-portfolio-project
 
-# Data Modelling:
-![Database](static/screenshots/DB_model.png)
 
 # Project's Screenshots
 ![Registered](static/screenshots/registered_readers.png)
