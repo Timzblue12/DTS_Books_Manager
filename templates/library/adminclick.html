@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin Dashboard | DTS Library Manager</title>
+
+    <!-- Bootstrap and Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Page Styles */
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Jumbotron Styling */
+        .jumbotron {
+            background-color: #003366; /* Navy Blue */
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .jumbotron h1 {
+            text-align: center;
+            color: #ff8c00; /* Bright Orange */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .jumbotron p.lead {
+            font-size: 1.2rem;
+            text-align: center;
+            color: #f0f0f0;
+        }
+
+        .jumbotron hr {
+            border-top: 2px solid #ff8c00;
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            background-color: #ff8c00;
+            border: none;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #1a1a1a; /* Dark Gray */
+        }
+    </style>
+</head>
+<body>
+
+    {% include "library/navbar.html" %}
+
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Welcome, Admin!</h1>
+            <p class="lead">Your powerful tool for managing the library at your fingertips.</p>
+            <hr class="my-4">
+            <p>Access all the features to efficiently track and manage library resources, students, and more.</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="adminlogin" role="button">Log in to Your Dashboard</a>
+            </p>
+        </div>
+    </div>
+
+    {% include "library/footer.html" %}
+
+</body>
+</html>

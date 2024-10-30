@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin Dashboard | DTS Books Manager</title>
+
+    <!-- Bootstrap and Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        /* General Page Styling */
+        body {
+            background-color: #180e33;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Jumbotron Styling */
+        .jumbotron {
+            background-color: #003366; /* Navy Blue */
+            color: #ff8c00;
+            padding: 2.5rem;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .jumbotron h1 {
+            color: #ff8c00; /* Bright Orange */
+            font-weight: bold;
+        }
+
+        .jumbotron .lead {
+            font-size: 1.4rem;
+            color: #000000;
+        }
+
+        /* Section Title */
+        .section-title {
+            color: #000000; /* Bright Orange */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            background-color: #ff8c00;
+            border: none;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 12px 24px;
+            transition: background-color 0.3s;
+            margin-bottom: 15px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .btn-primary:hover {
+            background-color: #1a1a1a; /* Dark Gray */
+        }
+
+        /* Circle Button Styling */
+        .btn-circle.btn-xl {
+            width: 70px;
+            height: 70px;
+            padding: 10px 16px;
+            border-radius: 35px;
+            font-size: 24px;
+            line-height: 1.33;
+        }
+
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            padding: 6px 0;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.42857;
+        }
+
+    </style>
+</head>
+<body>
+
+    {% include "library/navbaradmin.html" %}
+
+    <!-- Main Content -->
+    <center>
+        <h3 class="alert alert-success" style="margin-bottom: 0;">Welcome to DTS Books Library</h3>
+    </center>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Hello, {{ user.name }}</h1>
+            <p class="lead">Manage and track your library books easily with DTS Books Manager. Add books, assign books, and much more.</p>
+            <hr class="my-4">
+            <p class="section-title">Click the options below</p>
+
+            <div class="options" style="text-align:center">
+                <a href="addbook" class="btn btn-primary" role="button" aria-pressed="true">Add Book to Library</a><br>
+                <a href="viewbook" class="btn btn-primary" role="button" aria-pressed="true">View Available Books</a><br>
+                <a href="issuebook" class="btn btn-primary" role="button" aria-pressed="true">Issue New Book</a><br>
+                <a href="viewissuedbook" class="btn btn-primary" role="button" aria-pressed="true">View Issued Books</a><br>
+                <a href="viewreader" class="btn btn-primary" role="button" aria-pressed="true">View Readers</a>
+            </div>
+        </div>
+    </div>
+
+    {% include "library/footer.html" %}
+
+</body>
+</html>

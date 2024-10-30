@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <title>About Us - Library Management</title>
+
+    <style>
+      /* Color scheme: black, navy blue, and orange */
+      body {
+        background-color: #f7f7f7;
+      }
+      .jumbotron {
+        margin: 0;
+        background-color: navy;
+        color: white;
+        padding: 2rem;
+      }
+      h1.display-4 {
+        color: orange;
+        font-weight: bold;
+      }
+      .alert {
+        background-color: navy;
+        color: white;
+        font-size: 1.5rem;
+      }
+      .lead {
+        color: #ff8c00; /* Orange */
+      }
+      .jumbotron p {
+        color: #e0e0e0;
+      }
+      .btn-primary {
+        background-color: #ff8c00; /* Orange */
+        border: none;
+        font-weight: bold;
+      }
+      .btn-primary:hover {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+
+    {% include "library/navbar.html" %}
+    
+    <br><br>
+    <center><h3 class='alert'>About Us</h3></center>
+    
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome to Your Learning Hub!</h1>
+      <p class="lead">
+        At our library, we believe in fostering a love for reading and lifelong learning. Whether you're a student, teacher, or avid reader, our resources are designed to inspire and support your educational journey. 
+      </p>
+      <hr class="my-4" style="border-color: orange;">
+      <p>
+        Explore a world of knowledge through our extensive collection of books, research materials, and online resources. Our friendly team is here to guide and assist you every step of the way. Dive into learning and discover new possibilities!
+      </p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="/" role="button">Return to Home</a>
+      </p>
+    </div>
+
+    {% include "library/footer.html" %}
+
+  </body>
+</html>

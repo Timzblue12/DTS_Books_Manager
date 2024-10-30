@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Reader Signup - DTS Books Manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        body {
+            background-color: #eaf4f4; /* Light background for a fresh look */
+            font-family: 'Roboto', sans-serif;
+        }
+        .signup-form {
+            width: 500px;
+            margin: 50px auto; /* Centered with margin */
+            padding: 30px;
+            background: #ffffff; /* White background for the form */
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .signup-form h2 {
+            color: #161df0; /* Blue for header */
+            margin-bottom: 20px;
+            text-align: center; /* Center the title */
+        }
+        .signup-form h3 {
+            color: #5cd3b4; /* Teal color for alert */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .signup-form .form-group {
+            margin-bottom: 20px;
+        }
+        .signup-form label {
+            font-weight: bold; /* Bold labels for emphasis */
+            font-size: 14px;
+        }
+        .form-control {
+            border-color: #ddd;
+            min-height: 41px;
+            box-shadow: none !important;
+        }
+        .form-control:focus {
+            border-color: #5cd3b4; /* Teal focus color */
+        }
+        .signup-form .btn {
+            background: #161df0; /* Blue button */
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+            min-width: 140px;
+        }
+        .signup-form .btn:hover, .signup-form .btn:focus {
+            background: #41cba9; /* Teal on hover */
+            outline: none !important;
+        }
+        .signup-form a {
+            color: #161df0; /* Link color */
+            text-decoration: underline;
+        }
+        .signup-form a:hover {
+            text-decoration: none; /* Remove underline on hover */
+            color: #5cd3b4; /* Change color on hover */
+        }
+    </style>
+</head>
+<body>
+    {% include "library/navbar.html" %}
+    <br>
+    <br>
+    <center><h3 class='alert alert-success' style="margin-bottom: 0px;">Signup As Reader</h3></center>
+    <div class="signup-form">
+        <form method="post" class="form-horizontal">
+            <center><h2>Reader Signup</h2></center>
+
+            {% csrf_token %}
+            {% for field in form1 %}
+            <div class="form-group">
+                <label class="control-label">{{ field.label_tag }}</label>
+                <div>
+                    {{ field }}
+                </div>
+            </div>
+            {% endfor %}
+            {% for field in form2 %}
+            <div class="form-group">
+                <label class="control-label">{{ field.label_tag }}</label>
+                <div>
+                    {{ field }}
+                </div>
+            </div>
+            {% endfor %}
+
+            <div class="form-group">
+                <div>
+                    <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+                </div>
+            </div>
+        </form>
+        <div class="text-center">Already have an account? <a href="Readerlogin">Login here</a></div>
+    </div>
+
+    {% include "library/footer.html" %}
+</body>
+</html>

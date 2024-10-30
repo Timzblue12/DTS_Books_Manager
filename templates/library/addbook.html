@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Add Book | Online Library</title>
+
+    <!-- Bootstrap and Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <style>
+        /* General Styling */
+        body {
+            background-color: #b6bde7;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .alert {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #4CAF50; /* Success green */
+        }
+
+        /* Form Container Styling */
+        .signup-form {
+            width: 500px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .signup-form h2 {
+            color: #161df0;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .signup-form .form-group label {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Button Styling */
+        .btn-primary {
+            background-color: #161df0;
+            border: none;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background-color: #41cba9; /* Hover color */
+        }
+
+        /* Link Styling */
+        .signup-form a {
+            color: #2b04ff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .signup-form a:hover {
+            text-decoration: underline;
+        }
+
+        .signup-form form a {
+            color: #5cd3b4;
+            text-decoration: none;
+        }
+        
+        .signup-form form a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Include -->
+    {% include "library/navbaradmin.html" %}
+
+    <!-- Page Header -->
+    <center>
+        <h3 class="alert alert-success">Add a New Book to the Library</h3>
+    </center>
+
+    <!-- Form Container -->
+    <div class="signup-form">
+        <form method="post" class="form-horizontal">
+            {% csrf_token %}
+
+            <h2>Add Book Details</h2>
+            <p class="text-center">Fill in the details below to add a new book to the library’s collection.</p>
+
+            {% for field in form %}
+            <div class="form-group">
+                <label>{{ field.label_tag }}</label>
+                {{ field }}
+            </div>
+            {% endfor %}
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg">Add Book</button>
+            </div>
+        </form>
+
+        <!-- Link to View Books -->
+        <div class="text-center">
+            <p>See Available Books Here <a href="viewbook">Click here</a></p>
+        </div>
+    </div>
+
+    <!-- Footer Include -->
+    {% include "library/footer.html" %}
+
+</body>
+</html>
